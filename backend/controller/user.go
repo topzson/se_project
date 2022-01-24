@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/nitaxxix/sa-64-final/entity"
+	"github.com/topzson/se_project/entity"
 
 	"github.com/gin-gonic/gin"
 
@@ -27,7 +27,6 @@ func GetUser(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": user})
 
 }
-
 
 // GET /users
 

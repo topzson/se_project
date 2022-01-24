@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/nitaxxix/sa-64-final/entity"
+	"github.com/topzson/se_project/entity"
 
 	"github.com/gin-gonic/gin"
 
@@ -56,7 +56,6 @@ func CreateMedRecord(c *gin.Context) {
 	}
 	entity.DB().Joins("Role").Find(&pharmacist)
 
-	
 	//13.ต้องเป็น Pharmacist ถึงบันทึกได้
 	if pharmacist.Role.Name != "Pharmacist" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Only Pharmacist can save MedRecord !!"})

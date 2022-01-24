@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/nitaxxix/sa-64-final/controller"
-	"github.com/nitaxxix/sa-64-final/entity"
-	"github.com/nitaxxix/sa-64-final/middlewares"
 	"github.com/gin-gonic/gin"
+	"github.com/topzson/se_project/controller"
+	"github.com/topzson/se_project/entity"
+	"github.com/topzson/se_project/middlewares"
 )
 
 func main() {

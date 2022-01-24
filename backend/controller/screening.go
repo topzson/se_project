@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/nitaxxix/sa-64-final/entity"
+	"github.com/topzson/se_project/entity"
 
 	"github.com/gin-gonic/gin"
 
@@ -46,7 +46,7 @@ func CreateScreening(c *gin.Context) {
 	scr := entity.Screening{
 		//โยงความสัมพันธ์กับ Entity Patient
 		//โยงความสัมพันธ์กับ Entity Medical_product
-		//โยงความสัมพันธ์กับ Entity User	
+		//โยงความสัมพันธ์กับ Entity User
 		Patient:        patient,
 		MedicalProduct: medical_product,
 		UserDentistass: dentistass,

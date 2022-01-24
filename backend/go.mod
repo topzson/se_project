@@ -1,4 +1,4 @@
-module github.com/nitaxxix/sa-64-final
+module github.com/topzson/se_project
 
 go 1.17
 

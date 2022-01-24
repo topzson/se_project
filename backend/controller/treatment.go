@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/nitaxxix/sa-64-final/entity"
+	"github.com/topzson/se_project/entity"
 
 	"github.com/gin-gonic/gin"
 
@@ -25,8 +25,8 @@ func GetTreatment(c *gin.Context) {
 	var treatmentRecord entity.Treatment
 	id := c.Param("id")
 	if err := entity.DB().Preload("Screening").
-	Preload("Screening.Patient").
-	Raw("SELECT * FROM treatments WHERE id = ? ", id).Find(&treatmentRecord).Error; err != nil {
+		Preload("Screening.Patient").
+		Raw("SELECT * FROM treatments WHERE id = ? ", id).Find(&treatmentRecord).Error; err != nil {
 
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 
@@ -36,6 +36,7 @@ func GetTreatment(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": treatmentRecord})
 
 }
+
 // POST /treatmentRecord
 func CreateTreatment(context *gin.Context) {
 	var treatmentRecord entity.Treatment
